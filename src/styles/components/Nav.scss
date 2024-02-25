@@ -1,0 +1,45 @@
+@import '../global/variable.scss';
+@import '../global/mixins.scss';
+@import '../global/fonts.scss';
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $nav--background;
+    padding: 10px;
+    margin-top: 10px;
+    font-family: "Tenor Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+
+    img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    ul {
+        display: flex;
+        gap: 3rem;
+        list-style: none;
+
+        li {
+            a {
+                text-decoration: none;
+                color: $nav--text--color;
+            }
+        }
+    }
+
+    .btn-contact {
+        text-decoration: none;
+        padding: 8px;
+        background-color: $btn--contact--background;
+        color: $btn--contact--color;
+        border: none;
+        border-radius: 7px;
+
+    }
+}
