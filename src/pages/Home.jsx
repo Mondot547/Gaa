@@ -50,7 +50,7 @@ const Home = () => {
                             Je m'appelle <span>Agathe</span>,<br />
                             masseur-kinésithérapeute de formation
                             je vous propose mon savoir faire et mon
-                            expertise au travers de différents soins.
+                            expertise au travers de différents soins. 
                         </p>
                         <div className="btn-about">
                             <Link to='/Presentation' className="about">En savoir plus</Link>
