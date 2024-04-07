@@ -1,1 +1,149 @@
 @import '../global/variable.scss';
+@import '../global/mixins.scss';
+@import '../global/fonts.scss';
+
+
+header {
+    .bandeau {
+        width: 100%;
+        height: 300px;
+        background: url(../../assets/header-img.JPG) 50% no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            margin: 0;
+            text-align: center;
+            font-size: 3rem;
+            color: $nav--text--color;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.accroche {
+    padding: 20px 0 20px 0;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    background-color: $Background--color--presenterGaa;
+
+
+
+
+    @include breakpoint(md) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background: url(../../assets/dehindPlanteArrondiAuTop.jpg) no-repeat;
+        background-size: 25% 100%;
+        background-color: $Background--color--presenterGaa;
+    }
+
+
+    .img {
+        text-align: center;
+        width: 50%;
+        margin-top: 20px;
+
+        img {
+            width: 100%;
+            margin-bottom: 20px;
+            border-top-left-radius: 200%;
+            border-top-right-radius: 200%;
+
+
+            @include breakpoint(xl) {
+                width: 70%;
+            }
+
+            @include breakpoint(lg) {
+                width: 60%;
+                margin-left: 80px;
+                height: 450px;
+
+            }
+
+            @include breakpoint(md) {
+                width: 60%;
+            }
+        }
+    }
+
+    .presenterGaa {
+        width: 90%;
+        text-align: center;
+
+        @include breakpoint(lg) {
+            margin: 0 auto;
+        }
+
+        img {
+
+            @include breakpoint(md) {
+                margin-left: -60px;
+            }
+        }
+
+        p {
+            color: $nav--text--color;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+
+
+            @include breakpoint(md) {
+                text-align: initial;
+                font-size: 1.5em;
+                width: 100%;
+            }
+
+            span {
+                font-weight: bold;
+            }
+        }
+
+        .btn-about {
+            text-align: center;
+
+            .about {
+                text-decoration: none;
+                background-color: $nav--text--color;
+                padding: 5px 5px 5px 5px;
+                color: $nav--background;
+                border: none;
+                margin: 0 auto;
+                text-transform: uppercase;
+                font-size: 0.7rem;
+                font-family: "Tenor Sans", sans-serif;
+                transition: all ease 0.6s;
+
+                &:hover {
+                    border-radius: 10px;
+                }
+            }
+        }
+
+
+        @include breakpoint(md) {
+            text-align: start;
+            max-width: 400px;
+        }
+
+
+
+    }
+}
+
+.presenterPraticien {
+
+
+    .bandeau {
+        width: 100%;
+        height: 100px;
+    }
+}

@@ -1,8 +1,13 @@
 @import './breakpoints.scss';
 
-@mixin respond-to($breakpoint) {
-    $breakpoint-value: map-get($breakpoints, $breakpoint);
-    @media (max-width: $breakpoint-value) {
-        @content;
+@mixin breakpoint($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "Le breakpoint #{$breakpoint} n'est pas défini dans votre liste de breakpoints.";
     }
 }

@@ -1,37 +1,46 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
+import { NavLink, Link } from 'react-router-dom';
 import Logo from '../assets/logoGaa.webp';
 import '../styles/components/Nav.scss';
 
 
-const Nav = () => {
-    return (
-        <>
-            <nav>
-                <img src={Logo} alt="logo Gaa" />
-                <ul>
-                    <li>
-                        <Link to='/'>
-                            Accueil
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to='/Presentation'>
-                            Présentation
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to='/Soins'>
-                            Soins
-                        </Link>
-                    </li>
-                </ul>
-                <Link className='btn-contact' to='/Contact'>
-                    Contactez-moi
-                </Link>
-            </nav>
-        </>
-    );
-};
+class Nav extends Component {
 
+    state = { clicked: false };
+    handleClick = () => {
+        this.setState({ clicked: !this.state.clicked })
+    }
+
+    render() {
+        return (
+            <>
+                <nav>
+                    <div className="desktopNav">
+                        <Link to='/'><img src={Logo} alt="logo Gaa" /></Link>
+                        <ul>
+                            <li>
+                                <NavLink to='/'>
+                                    Accueil
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to='/Presentation'>
+                                    Présentation
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to='/Soins'>
+                                    Soins
+                                </NavLink>
+                            </li>
+                        </ul>
+                        <Link className='btn-contact' to='/Contact'>
+                            Contactez-moi
+                        </Link>
+                    </div>
+                </nav>
+            </>
+        );
+    };
+};
 export default Nav;

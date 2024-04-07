@@ -1,0 +1,9 @@
+@import '../global/variable.scss';
+@import '../global/mixins.scss';
+@import '../global/fonts.scss';
+
+
+.separateur {
+    height: 40px;
+    background-color: $Background--color--presenterGaa;
+}
