@@ -9,6 +9,10 @@ import Separateur from '../components/Separateur';
 import H1 from '../assets/h1-header.png';
 import Modal from '../components/Modal';
 import Cookies from 'js-cookie';
+import Card from '../components/Cards';
+import Soin1 from '../assets/soin1.png';
+import Soin2 from '../assets/soin2.png';
+import Soin3 from '../assets/soin3.png'
 
 
 const Home = () => {
@@ -32,7 +36,7 @@ const Home = () => {
                 <Nav />
                 <div className='bandeau'>
                     <h1>
-                        <img src={H1} alt="Titre de la page" />
+                        <img src={H1} alt="A la rencontre de la Thérapie et du Bien-être" />
                     </h1>
                 </div>
             </header>
@@ -46,11 +50,11 @@ const Home = () => {
                         <img src={Hey} alt="Titre h1 HEY" />
                         <p>
                             <span>Bienvenue chez Gaa</span>,<br />
-                            un univers de soins thérapeutiques.
+                            un univers de soins thérapeutiques. <br />
                             Je m'appelle <span>Agathe</span>,<br />
                             masseur-kinésithérapeute de formation
                             je vous propose mon savoir faire et mon
-                            expertise au travers de différents soins. 
+                            expertise au travers de différents soins.
                         </p>
                         <div className="btn-about">
                             <Link to='/Presentation' className="about">En savoir plus</Link>
@@ -58,6 +62,38 @@ const Home = () => {
                     </div>
                 </section>
                 <Separateur />
+                <section className="liste-soins">
+                    <h2>Les Soins</h2>
+                    <ul>
+                        <li className="soin1">
+                            <Card
+                                imageUrl={Soin1}
+                                imageAlt="Image représentant une plante"
+                                title={`
+                                    Massage <Br/> Thérapeutique
+                                `}
+                            />
+                        </li>
+                        <li className="soin2">
+                        <Card
+                                imageUrl={Soin2}
+                                imageAlt="Image représentant une plante"
+                                title={`
+                                    Massage <Br/> Thérapeutique
+                                `}
+                            />
+                        </li>
+                        <li className="soin3">
+                        <Card
+                                imageUrl={Soin3}
+                                imageAlt="Image représentant une plante"
+                                title={`
+                                    Massage <Br/> Thérapeutique
+                                `}
+                            />
+                        </li>
+                    </ul>
+                </section>
             </main>
             <Footer />
         </>

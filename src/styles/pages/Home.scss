@@ -14,12 +14,24 @@ header {
         justify-content: center;
 
         h1 {
-            margin: 0;
+            margin: 0 auto;
             text-align: center;
             font-size: 3rem;
             color: $nav--text--color;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             text-transform: uppercase;
+
+            img {
+                width: 300px;
+
+                @include breakpoint(md) {
+                    width: 400px;
+                }
+
+                @include breakpoint(lg) {
+                    width: 500px;
+                }
+            }
         }
     }
 }
@@ -52,10 +64,11 @@ header {
         margin-top: 20px;
 
         img {
-            width: 100%;
+            width: 70%;
             margin-bottom: 20px;
             border-top-left-radius: 200%;
             border-top-right-radius: 200%;
+            margin-top: 20px;
 
 
             @include breakpoint(xl) {
@@ -71,13 +84,17 @@ header {
 
             @include breakpoint(md) {
                 width: 60%;
+
             }
+
+
         }
     }
 
     .presenterGaa {
         width: 90%;
         text-align: center;
+        z-index: 1000;
 
         @include breakpoint(lg) {
             margin: 0 auto;
@@ -92,7 +109,7 @@ header {
 
         p {
             color: $nav--text--color;
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             margin-bottom: 20px;
 
 
@@ -109,16 +126,21 @@ header {
 
         .btn-about {
             text-align: center;
+            margin-top: 30px;
+            margin-bottom: 35px;
+            border: none;
+
+            @include breakpoint(md) {
+                margin-top: 50px
+            }
 
             .about {
                 text-decoration: none;
                 background-color: $nav--text--color;
                 padding: 5px 5px 5px 5px;
                 color: $nav--background;
-                border: none;
-                margin: 0 auto;
                 text-transform: uppercase;
-                font-size: 0.7rem;
+                font-size: 0.8rem;
                 font-family: "Tenor Sans", sans-serif;
                 transition: all ease 0.6s;
 
@@ -139,8 +161,59 @@ header {
     }
 }
 
-.presenterPraticien {
+.liste-soins {
+    background: url(../../assets/lignes.png) no-repeat;
+    background-color: $background-soins;
+    background-position-x: 100%;
+    background-size: contain;
+    height: 800px;
 
+    @include breakpoint(md) {
+        padding: 80px 20px 0 20px;
+        height: 400px
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 3rem;
+        margin: 0 auto;
+        color: $background-soins;
+        background: url(../../assets//bckgTitreSoins.png) no-repeat;
+        background-size: 100% 100% ;
+        
+        font-family: "Tenor Sans", sans-serif;
+        min-width: 300px;
+        max-width: 400px;
+        height: 70px;
+    }
+
+    ul {
+        background: url(../../assets/lienSoinsColor-removebg-preview.png) no-repeat;
+        background-position-x: center;
+        background-position-y: center;
+        background-size: 100% 40%;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+
+        @include breakpoint(md) {
+            flex-direction: row;
+            height: 350px;
+        }
+
+        li {
+            text-align: center;
+
+            h3 {
+                color: $nav--text--color;
+                font-family: "Tenor Sans", sans-serif;
+            }
+        }
+    }
 
     .bandeau {
         width: 100%;

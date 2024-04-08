@@ -19,7 +19,7 @@ function Modal(props) {
                 <nav>
                     <ul>
                         <li className='item-insta-modal'>
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.facebook.com/profile.php?id=61556910890943" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faInstagram} size='2x' className="rounded-icon" />
                             </a>
                         </li>
@@ -27,7 +27,7 @@ function Modal(props) {
                             <img src={logoBasDePage} alt="représentation d'une feuille" />
                         </li>
                         <li className='item-facebook-modal'>
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.instagram.com/gaa.therapie/" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faFacebookF} size='2x' className="rounded-icon" />
                             </a>
                         </li>
